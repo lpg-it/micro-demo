@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = ".;prototest";
+
+message Test {
+  // 姓名
+  string name = 1;
+  // 年龄
+  int32 age = 2;
+  // 爱好
+  repeated string hobbies = 3;
+}

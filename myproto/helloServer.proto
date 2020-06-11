@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = ".;myproto";
+
+service HelloServer {
+  // 创建第一个接口
+  rpc SayHello(HelloRequest) returns (HelloResponse){}
+  // 创建第二个接口
+  rpc PrintMotto(MottoRequest) returns (MottoResponse){}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string msg = 1;
+}
+
+message MottoRequest {
+  string motto = 1;
+}
+
+message MottoResponse {
+  string msg = 1;
+}
